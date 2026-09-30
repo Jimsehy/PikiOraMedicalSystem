@@ -38,7 +38,7 @@ a { color: #6709b3; text-decoration: none; }
 
 .card h2 { margin-top: 0; }
 
-.form-card { max-width: 650px; margin: 45px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,.05); }
+.form-card { max-width: 650px; margin: 45px auto; background: white; padding: 30px; box-shadow: 0 2px 15px rgba(0,0,0,.05); }
 
 .form-card input, .form-card select, .form-card textarea { width: 100%; padding: 9px; border: 1px solid #cbd8d5; border-radius: 6px; }
 
