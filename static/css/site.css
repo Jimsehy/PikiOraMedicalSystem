@@ -18,11 +18,11 @@ a { color: #6709b3; text-decoration: none; }
 
 .link-button { border: 0; background: transparent; padding: 0; color: #6709b3; cursor: pointer; font: inherit; }
 
-.hero { margin: 55px 0 35px; background: white; padding: 45px; border-radius: 14px; box-shadow: 0 3px 18px rgba(0,0,0,.06); }
+.hero { margin: 55px 0 35px; background: white; padding: 45px; box-shadow: 0 3px 18px rgba(0,0,0,.06); }
 
 .hero h1 { font-size: 2.3rem; margin-top: 0; }
 
-.button { display: inline-block; border: 0; border-radius: 7px; padding: 10px 16px; background: #6709b3; color: white; cursor: pointer; font-size: .95rem; }
+.button { display: inline-block; border: 0; padding: 10px 16px; background: #6709b3; color: white; cursor: pointer; font-size: .95rem; }
 
 .button:hover { opacity: .9; }
 
@@ -40,11 +40,11 @@ a { color: #6709b3; text-decoration: none; }
 
 .form-card { max-width: 650px; margin: 45px auto; background: white; padding: 30px; box-shadow: 0 2px 15px rgba(0,0,0,.05); }
 
-.form-card input, .form-card select, .form-card textarea { width: 100%; padding: 9px; border: 1px solid #cbd8d5; border-radius: 6px; }
+.form-card input, .form-card select, .form-card textarea { width: 100%; padding: 9px; border: 1px solid #cbd8d5; }
 
 .form-card label { font-weight: 600; }
 
-.table-wrap { overflow-x: auto; background: white; border-radius: 10px; margin: 25px 0 50px; }
+.table-wrap { overflow-x: auto; background: white; margin: 25px 0 50px; }
 
 table { width: 100%; border-collapse: collapse; }
 
@@ -52,17 +52,17 @@ th, td { padding: 13px; text-align: left; border-bottom: 1px solid #e3ebe9; }
 
 th { background: #edf4f2; }
 
-.message { margin: 20px 0; padding: 12px 16px; border-radius: 7px; background: #e5f1ed; }
+.message { margin: 20px 0; padding: 12px 16px; background: #e5f1ed; }
 
 .message.error { background: #f9e4e4; }
 
 .message.warning { background: #fff1d7; }
 
-.badge { display: inline-block; padding: 5px 9px; border-radius: 20px; background: #e9e9e9; }
+.badge { display: inline-block; padding: 5px 9px; background: #e9e9e9; }
 
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 15px; margin: 25px 0; }
 
-.stat { background: white; padding: 22px; border-radius: 10px; display: flex; flex-direction: column; }
+.stat { background: white; padding: 22px; display: flex; flex-direction: column; }
 
 .stat strong { font-size: 2rem; }
 
