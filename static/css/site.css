@@ -16,13 +16,13 @@ a { color: #6709b3; text-decoration: none; }
 
 .inline { display: inline; }
 
-.link-button { border: 0; background: transparent; padding: 0; color: #126b62; cursor: pointer; font: inherit; }
+.link-button { border: 0; background: transparent; padding: 0; color: #6709b3; cursor: pointer; font: inherit; }
 
 .hero { margin: 55px 0 35px; background: white; padding: 45px; border-radius: 14px; box-shadow: 0 3px 18px rgba(0,0,0,.06); }
 
 .hero h1 { font-size: 2.3rem; margin-top: 0; }
 
-.button { display: inline-block; border: 0; border-radius: 7px; padding: 10px 16px; background: #126b62; color: white; cursor: pointer; font-size: .95rem; }
+.button { display: inline-block; border: 0; border-radius: 7px; padding: 10px 16px; background: #6709b3; color: white; cursor: pointer; font-size: .95rem; }
 
 .button:hover { opacity: .9; }
 
