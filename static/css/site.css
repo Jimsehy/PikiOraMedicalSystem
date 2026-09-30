@@ -34,7 +34,7 @@ a { color: #6709b3; text-decoration: none; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-bottom: 40px; }
 
-.card { display: block; background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+.card { display: block; background: white; padding: 24px;  box-shadow: 0 2px 12px rgba(0,0,0,.05); }
 
 .card h2 { margin-top: 0; }
 
