@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Cancel Appointment | Piki Ora{% endblock %}
+{% block content %}
+<div class="form-card">
+    <h1>Cancel appointment?</h1>
+    <p>Dr {{ appointment.slot.doctor.name }} — {{ appointment.slot.date|date:"d M Y" }} at {{ appointment.slot.start_time|time:"H:i" }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button class="button danger" type="submit">Yes, cancel</button>
+        <a class="button secondary" href="{% url 'my_appointments' %}">Keep appointment</a>
+    </form>
+</div>
+{% endblock %}

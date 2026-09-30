@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Available Appointments | Piki Ora{% endblock %}
+{% block content %}
+<h1>Available appointments</h1>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Doctor</th><th>Specialty</th><th>Date</th><th>Time</th><th>Status</th></tr></thead>
+<tbody>
+{% for slot in slots %}
+<tr>
+    <td>Dr {{ slot.doctor.name }}</td>
+    <td>{{ slot.doctor.specialty }}</td>
+    <td>{{ slot.date|date:"d M Y" }}</td>
+    <td>{{ slot.start_time|time:"H:i" }}–{{ slot.end_time|time:"H:i" }}</td>
+    <td>
+        {% if slot.is_booked %}
+            <span class="badge">Booked</span>
+        {% elif user.is_authenticated %}
+            <a class="button small" href="{% url 'book_appointment' slot.id %}">Book</a>
+        {% else %}
+            <a class="button small" href="{% url 'login' %}?next={% url 'slot_list' %}">Log in to book</a>
+        {% endif %}
+    </td>
+</tr>
+{% empty %}
+<tr><td colspan="5">No appointment slots are currently available.</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% endblock %}

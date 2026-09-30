@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Appointment Slots | Staff Dashboard{% endblock %}
+{% block content %}
+<div class="page-heading"><h1>Appointment slots</h1><a class="button" href="{% url 'slot_create' %}">Add slot</a></div>
+<div class="table-wrap"><table>
+<thead><tr><th>Doctor</th><th>Date</th><th>Time</th><th>Active</th><th>Booking</th><th>Actions</th></tr></thead>
+<tbody>
+{% for slot in slots %}
+<tr>
+<td>Dr {{ slot.doctor.name }}</td>
+<td>{{ slot.date|date:"d M Y" }}</td>
+<td>{{ slot.start_time|time:"H:i" }}–{{ slot.end_time|time:"H:i" }}</td>
+<td>{{ slot.active|yesno:"Yes,No" }}</td>
+<td>{% if slot.is_booked %}<span class="badge">Booked</span>{% else %}<span class="badge">Available</span>{% endif %}</td>
+<td><a class="button small" href="{% url 'slot_edit' slot.id %}">Edit</a> <a class="button small danger" href="{% url 'slot_delete' slot.id %}">Delete</a></td>
+</tr>
+{% empty %}<tr><td colspan="6">No slots.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

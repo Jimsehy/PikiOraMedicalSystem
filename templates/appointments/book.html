@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Book Appointment | Piki Ora{% endblock %}
+{% block content %}
+<div class="form-card">
+    <h1>Book appointment</h1>
+    <p><strong>Dr {{ slot.doctor.name }}</strong> — {{ slot.doctor.specialty }}</p>
+    <p>{{ slot.date|date:"l, d F Y" }} at {{ slot.start_time|time:"H:i" }}</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="button" type="submit">Confirm booking</button>
+        <a class="button secondary" href="{% url 'slot_list' %}">Back</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Appointments | Staff Dashboard{% endblock %}
+{% block content %}
+<h1>All appointments</h1>
+<div class="table-wrap"><table>
+<thead><tr><th>Patient</th><th>Doctor</th><th>Date</th><th>Time</th><th>Status</th><th>Actions</th></tr></thead>
+<tbody>
+{% for appointment in appointments %}
+<tr><td>{{ appointment.patient.username }}</td><td>Dr {{ appointment.slot.doctor.name }}</td><td>{{ appointment.slot.date|date:"d M Y" }}</td><td>{{ appointment.slot.start_time|time:"H:i" }}</td><td>{{ appointment.get_status_display }}</td>
+<td><a class="button small" href="{% url 'appointment_edit_admin' appointment.id %}">Edit</a>
+<a class="button small danger" href="{% url 'appointment_delete_admin' appointment.id %}">Cancel</a></td></tr>
+{% empty %}<tr><td colspan="6">No appointments.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

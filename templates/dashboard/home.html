@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Staff Dashboard | Piki Ora{% endblock %}
+{% block content %}
+<h1>Staff Dashboard</h1>
+<div class="stats">
+    <div class="stat"><strong>{{ doctor_count }}</strong><span>Doctors</span></div>
+    <div class="stat"><strong>{{ slot_count }}</strong><span>Slots</span></div>
+    <div class="stat"><strong>{{ booking_count }}</strong><span>Active bookings</span></div>
+    <div class="stat"><strong>{{ patient_count }}</strong><span>Patients</span></div>
+</div>
+<div class="cards">
+    <a class="card" href="{% url 'doctor_list' %}"><h2>Doctors</h2><p>Add, edit and remove doctor profiles.</p></a>
+    <a class="card" href="{% url 'slot_list_admin' %}"><h2>Appointment slots</h2><p>Create and manage available times.</p></a>
+    <a class="card" href="{% url 'appointment_list_admin' %}"><h2>Appointments</h2><p>View, edit and cancel bookings.</p></a>
+    <a class="card" href="{% url 'patient_list' %}"><h2>Patients</h2><p>Manage patient accounts.</p></a>
+</div>
+{% endblock %}
